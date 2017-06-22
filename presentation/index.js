@@ -151,13 +151,14 @@ export default class Presentation extends React.Component {
           <Heading margin="30px 0" size={6} textColor="secondary">Full time working on Colmena.</Heading>
           <Text size={4} textColor="secondary">Shift focus from CMS to a platform to enable Rapid API Development.</Text>
           <Text margin="30px 0" size={2} textColor="fifth">Rename: Colmena CMS -> Colmena</Text>
+          <Heading margin="30px 0" size={6} textColor="secondary">LookBack v3.x - Angular v4.x.</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={1} textColor="secondary">Future</Heading>
           <List>
             <ListItem>Work towards initial release.</ListItem>
-            <ListItem>Validate the product with other devs.</ListItem>
+            <ListItem>Validate the project with other devs.</ListItem>
             <ListItem>Create strategy on how to go forward.</ListItem>
           </List>
         </Slide>
@@ -187,6 +188,7 @@ export default class Presentation extends React.Component {
             <Quote>Questions?</Quote>
             <Cite>Twitter: @beeman_nl</Cite>
             <Cite>GitHub: @beeman</Cite>
+            <Cite>Slack: https://colmena-slack.now.sh/</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
