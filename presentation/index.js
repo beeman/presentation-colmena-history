@@ -5,11 +5,13 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   ListItem,
   List,
   Quote,
+  CodePane,
   Slide,
   Text
 } from "spectacle";
@@ -38,7 +40,8 @@ const theme = createTheme({
   primary: "white",
   secondary: "#1F2022",
   tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  quartenary: "#CECECE",
+  fifth: "#9D9D9D"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -55,7 +58,7 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="secondary" size={6} fit bold>
             <code>kolˈmena</code>
           </Text>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="fifth" size={1} fit bold>
             Spanish for beehive
           </Text>
         </Slide>
@@ -63,32 +66,47 @@ export default class Presentation extends React.Component {
           <Heading size={2} textColor="secondary">History</Heading>
           <Heading margin="30px 0 0" size={2} textColor="secondary">Current</Heading>
           <Heading margin="30px 0 0" size={2} textColor="secondary">Future</Heading>
+          <Heading margin="30px 0 0" size={2} textColor="secondary">Structure</Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={3} textColor="secondary">loopback-angular-admin</Heading>
+          <Text margin="30px 0" size={4} textColor="secondary">In need for a Mobile Backend to start building Ionic apps</Text>
+
         </Slide>
 
 
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">History</Heading>
-          <Text margin="30px 0" size={6} textColor="secondary">Why AngularJS (1.2.x)</Text>
-          <List>
-            <ListItem>Batteries included</ListItem>
-            <ListItem>Ionic is built on it.</ListItem>
-            <ListItem>Great AngularJS SDK for LoopBack</ListItem>
-          </List>
-
-          <Text margin="30px 0" size={6} textColor="secondary">Why LoopBack (2.x)</Text>
+          <Heading size={3} textColor="secondary">Why LoopBack (2.x)</Heading>
           <List>
             <ListItem>Rapid API development</ListItem>
-            <ListItem>Easy to extend, integrate</ListItem>
-            <ListItem>Running on NodeJS</ListItem>
+            <ListItem>Easy to extend, integrate.</ListItem>
+            <ListItem>Running on NodeJS (full-stack JS)</ListItem>
+            <ListItem>Great LoopBack SDK for AngularJS SDK</ListItem>
+          </List>
+
+          <Text>
+            Connects to:
+            MongoDB, MySQL, Postgres, Oracle, REST, SOAP
+          </Text>
+        </Slide>
+
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={3} textColor="secondary">Why AngularJS (1.2.x)</Heading>
+          <List>
+            <ListItem>'Batteries included' framework</ListItem>
+            <ListItem>Ionic is built on it.</ListItem>
+            <ListItem>Great Community</ListItem>
+            <ListItem>Great LoopBack SDK for AngularJS SDK</ListItem>
           </List>
         </Slide>
 
 
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">History</Heading>
+          <Heading size={1} textColor="secondary">2014</Heading>
 
           <Heading margin="30px 0" size={6} textColor="secondary">Aug, 1st: LoopBack Angular Admin</Heading>
-          <Text margin="30px 0" size={4} textColor="secondary">In need for a Mobile Backend to start building Ionic apps</Text>
           <Text size={4} textColor="secondary">Proof of Concept of building a CMS using LoopBack and Angular</Text>
 
           <Heading margin="30px 0" size={6} textColor="secondary">Aug, 22st: First issue/PR</Heading>
@@ -96,7 +114,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">History</Heading>
+          <Heading size={1} textColor="secondary">2015</Heading>
 
           <Heading margin="30px 0" size={6} textColor="secondary">Jan, '15: Translation support</Heading>
           <Text margin="20px 0" size={4} textColor="secondary">Several languages added by community members</Text>
@@ -105,50 +123,61 @@ export default class Presentation extends React.Component {
           <Text margin="20px 0" size={4} textColor="secondary">Full-time LoopBack/Angular developer</Text>
           <Text size={4} textColor="secondary">Thanks to the project!</Text>
 
-          <Heading margin="30px 0" size={6} textColor="secondary">2016: Modern AngularJS (components)</Heading>
-          <Heading margin="30px 0" size={6} textColor="secondary">2016: [unreleased] WebPack + ES6</Heading>
-
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">History</Heading>
 
-          <Heading margin="30px 0" size={6} textColor="secondary">Feb, '17: Rewrite in Angular (2.x)</Heading>
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">2016</Heading>
+          <Heading margin="30px 0" size={6} textColor="secondary">Modern AngularJS (components)</Heading>
+          <Heading margin="30px 0" size={6} textColor="secondary">[unreleased] WebPack + ES6</Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">2017</Heading>
+
+          <Heading margin="30px 0" size={6} textColor="secondary">Feb: Rewrite in Angular (2.x)</Heading>
           <Text margin="30px 0" size={4} textColor="secondary">Thanks to Angular CLI</Text>
           <Text size={4} textColor="secondary">Less functionality on a better basis</Text>
 
-          <Heading margin="30px 0" size={6} textColor="secondary">Feb, '17: Rename to Colmena CMS</Heading>
+          <Heading margin="30px 0" size={6} textColor="secondary">Feb: Rename to Colmena CMS</Heading>
           <Text size={4} textColor="secondary">Move to GitHub org colmena</Text>
 
-          <Heading margin="30px 0" size={6} textColor="secondary">May, '17: Move to lerna</Heading>
+          <Heading margin="30px 0" size={6} textColor="secondary">May: Move to lerna</Heading>
           <Text size={4} textColor="secondary">Apps/Modules/Packages all the way</Text>
         </Slide>
 
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={1} textColor="secondary">Current</Heading>
-
           <Heading margin="30px 0" size={6} textColor="secondary">Full time working on Colmena.</Heading>
-
-
           <Text size={4} textColor="secondary">Focus-shift from CMS to a platform to enable Rapid API Development.</Text>
-
         </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">Current</Heading>
-
-        </Slide>
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={1} textColor="secondary">Current</Heading>
-
-        </Slide>
-
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={1} textColor="secondary">Future</Heading>
           <List>
-            <ListItem>Work towards initial release</ListItem>
-            <ListItem>Validate the product</ListItem>
-            <ListItem>Create strategy</ListItem>
+            <ListItem>Work towards initial release.</ListItem>
+            <ListItem>Validate the product with other devs.</ListItem>
+            <ListItem>Create strategy on how to go forward.</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Structure</Heading>
+          <Text size={4} textColor="secondary">Lerna is AWESOME!</Text>
+          <List>
+            <ListItem>Manage a monorepo of node modules.</ListItem>
+            <ListItem>Split Angular and LoopBack app up.</ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={1} textColor="secondary">Structure</Heading>
+          <List>
+            <ListItem>apps</ListItem>
+            <ListItem>modules</ListItem>
+            <ListItem>packages</ListItem>
+
+            <ListItem>extensions</ListItem>
           </List>
         </Slide>
 
