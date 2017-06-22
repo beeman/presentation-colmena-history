@@ -58,5 +58,11 @@
     "webpack": "2.2.0",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.0"
+  },
+  "now": {
+    "name": "colmena-history",
+    "alias": [
+      "colmena-history"
+    ]
   }
 }
